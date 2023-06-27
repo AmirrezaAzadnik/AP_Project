@@ -1,0 +1,1 @@
+/usr/local/bin/c++ CMakeFiles/main.dir/main.cpp.o CMakeFiles/main.dir/src/chat.cpp.o CMakeFiles/main.dir/src/client_app.cpp.o CMakeFiles/main.dir/src/message.cpp.o CMakeFiles/main.dir/src/client.cpp.o CMakeFiles/main.dir/src/server.cpp.o CMakeFiles/main.dir/src/gp_chat.cpp.o CMakeFiles/main.dir/src/pv_chat.cpp.o -o main 
