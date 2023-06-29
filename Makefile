@@ -67,7 +67,7 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /usr/src/app
+CMAKE_SOURCE_DIR = /usr/src/app/build
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /usr/src/app

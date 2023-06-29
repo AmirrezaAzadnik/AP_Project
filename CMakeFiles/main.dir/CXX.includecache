@@ -6,15 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/usr/src/app/include/client.h
+/usr/src/app/main.cpp
 iostream
 -
-string
--
-vector
--
-
-/usr/src/app/src/client.cpp
-../include/client.h
-/usr/src/app/include/client.h
 

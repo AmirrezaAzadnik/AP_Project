@@ -4,7 +4,7 @@
 # compile CXX with /usr/local/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/src/app/include
+CXX_INCLUDES = -I/usr/src/app/build/include -I/usr/src/app/build/path/to/mnmlstc-core/include
 
 CXX_FLAGS = -std=gnu++2a
 

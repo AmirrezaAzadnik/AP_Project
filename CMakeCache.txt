@@ -18,7 +18,7 @@
 AP_Project_BINARY_DIR:STATIC=/usr/src/app
 
 //Value Computed by CMake
-AP_Project_SOURCE_DIR:STATIC=/usr/src/app
+AP_Project_SOURCE_DIR:STATIC=/usr/src/app/build
 
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
@@ -300,7 +300,7 @@ CMAKE_GENERATOR_PLATFORM:INTERNAL=
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=/usr/src/app
+CMAKE_HOME_DIRECTORY:INTERNAL=/usr/src/app/build
 //Install .so files without execute permission.
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER

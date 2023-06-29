@@ -62,7 +62,7 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /usr/src/app
+CMAKE_SOURCE_DIR = /usr/src/app/build
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /usr/src/app
@@ -217,6 +217,6 @@ CMakeFiles/main.dir/clean:
 .PHONY : CMakeFiles/main.dir/clean
 
 CMakeFiles/main.dir/depend:
-	cd /usr/src/app && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /usr/src/app /usr/src/app /usr/src/app /usr/src/app /usr/src/app/CMakeFiles/main.dir/DependInfo.cmake --color=$(COLOR)
+	cd /usr/src/app && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /usr/src/app/build /usr/src/app/build /usr/src/app /usr/src/app /usr/src/app/CMakeFiles/main.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/main.dir/depend
 
