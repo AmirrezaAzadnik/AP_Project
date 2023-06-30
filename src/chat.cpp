@@ -47,18 +47,18 @@ Chat::Chat(Chat&& c)
 
 //---------------------Methods-----------------------------------------
 
-bool Chat::store_message(Message& message)
+bool Chat::store_message(std::shared_ptr<Message> message)
 {
-    messages.push_back(&message);
-    messagesfile << message.get_sender().get_id() << " " << message.get_reciever().get_id() << " " << message.get_message() << " " << message.get_time_in_string() << std::endl;
+    messages.push_back(message);
+    messagesfile << message->get_sender().get_id() << " " << message->get_reciever()->get_id() << " " << message->get_message() << " " << message->get_time_in_string() << std::endl;
     return true;
 }
 
-bool Chat::remove_message(Message& message)
+bool Chat::remove_message(std::shared_ptr<Message> message)
 {
     for(size_t i{}; i < messages.size(); i++)
     {
-        if(messages[i]->get_message() ==  message.get_message())
+        if(messages[i]->get_message() ==  message->get_message())
            {
                 messages.erase(messages.begin()+i);
                 return true;
@@ -77,6 +77,17 @@ std::string Chat::get_chat_name()
 std::string Chat::get_messagesfile_name()
 {
     return chat_name + ".txt";
+}
+
+std::shared_ptr<Message> Chat::find_message(std::string message_content, std::string user_id, std::string _chat_name)
+{
+    for(size_t i{}; i < messages.size(); i++)
+    {
+        if(messages[i]->get_message() == message_content && messages[i]->get_sender().get_id() == user_id && messages[i]->get_chat_name() == _chat_name)
+            return messages[i];
+    }
+    std::cout << "Message not found !" << std::endl;
+    return nullptr;
 }
 
 //------------------------end of Methods--------------------------------------

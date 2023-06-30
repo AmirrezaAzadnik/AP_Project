@@ -26,14 +26,14 @@ Gp_Chat::Gp_Chat(Gp_Chat&& g)
     std::cout << "Group Chat Move Constructor" << std::endl;
 }
 
-void Gp_Chat::add_user(Client user)
+void Gp_Chat::add_user(std::shared_ptr<Client> user)
 {
-    users.push_back(&user);
+    users.push_back(user);
 }
 
-void Gp_Chat::remove_user(Client user)
+void Gp_Chat::remove_user(std::shared_ptr<Client> user)
 {
     for(size_t i{}; i < users.size(); i++)
-        if(user.get_id() == users[i]->get_id())
+        if(user->get_id() == users[i]->get_id())
             users.erase(users.begin() + i);
 }

@@ -63,6 +63,10 @@ int main() {
                   std::cout << "5)Delete Message \n";
                   std::cout << "6)Delete Account \n";
                   std::cout << "7)LogOut \n";
+                  std::cout << "8)Change ID \n";
+                  std::cout << "9)Change Password \n";
+                  std::cout << "10)Add User to Group \n";
+                  std::cout << "11)Remove User From Group \n";
                   int entry_3;
                   std::cin >> entry_3;
                   if(entry_3 == 1)
@@ -70,7 +74,8 @@ int main() {
                     std::cout << "Who do you want to chat with ?" << std::endl;
                     std::string name;
                     std::cin >> name;
-                    //end
+                    std::shared_ptr<Client> client = client_app.find_client(name);
+                    client_app.create_pv(client);
                   }
 
                   else if(entry_3 == 2)
@@ -83,13 +88,43 @@ int main() {
                   }
 
                   else if(entry_3 == 3)
-                  {}
+                  {
+                    std::cout << "Enter Chat's name :" << std::endl;
+                    std::string _chat_name;
+                    client_app.delete_chat(_chat_name);
+                  }
 
                   else if(entry_3 == 4)
-                  {}
+                  {
+                    std::cout << "Enter the user id you want to send message to :" << std::endl;
+                    std::string user;
+                    std::cin >> user;
+                    std::cout << "Enter the text message you want to send :" << std::endl;
+                    std::string text_message;
+                    std::cin >> text_message;
+                    std::cout << "Enter the file message url you want to send :" << std::endl;
+                    std::string file_message;
+                    std::cin >> file_message;
+                    std::cout << "Enter the chat name you want to send message to :" << std::endl;
+                    std::string chat_name;
+                    std::cin >> chat_name;
+                    std::shared_ptr<Client> client = client_app.find_client(user);
+                    client_app.send_message(text_message, file_message, client,chat_name);
+                  }
 
                   else if(entry_3 == 5)
-                  {}
+                  {
+                    std::cout << "Which message you wish to delete? Enter chat name :" << std::endl;
+                    std::string chat_name;
+                    std::cin >> chat_name;
+                    std::cout << "Enter message content :" << std::endl;
+                    std::string message_content;
+                    std::cin >> message_content;
+                    std::shared_ptr<Message> message = client_app.find_chat(chat_name)->find_message(message_content,client_app.get_active_user().get_id(),chat_name);
+                    client_app.find_chat(chat_name)->remove_message(message);
+                    std::cout << "Message Removed !" << std::endl;
+
+                  }
 
                   else if(entry_3 == 6)
                   {
@@ -117,12 +152,50 @@ int main() {
                       break;
                   }
 
+                  else if(entry_3 == 8)
+                  {
+                      std::cout << "Enter Your Old ID : " << std::endl;
+                      std::string old_ID;
+                      std::cin >> old_ID;
+                      std::cout << "Enter Password : " << std::endl;
+                      std::string Password;
+                      std::cin >> Password;
+                      std::cout << "Enter Your New ID : " << std::endl;
+                      std::string new_ID;
+                      std::cin >> new_ID;
+                      client_app.get_active_user().change_id(old_ID,Password,new_ID);
+                  }
+
+                  else if(entry_3 == 9)
+                  {
+                      std::cout << "Enter Your ID : " << std::endl;
+                      std::string ID;
+                      std::cin >> ID;
+                      std::cout << "Enter Your Old Password : " << std::endl;
+                      std::string old_Password;
+                      std::cin >> old_Password;
+                      std::cout << "Enter Your New Password : " << std::endl;
+                      std::string new_Password;
+                      std::cin >> new_Password;
+                      client_app.get_active_user().change_id(ID,old_Password,new_Password);
+                  }
+
+                  else if(entry_3 == 10)
+                  {
+                    continue;
+                  }
+
+                  else if(entry_3 == 11)
+                  {
+                    continue;
+                  }
                   else
                   {
                       std::cout << "Not Valid Input" << std::endl;
                   }
 
               }
+              break;
           }
           else
           {

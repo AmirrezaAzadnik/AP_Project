@@ -13,11 +13,11 @@ public:
     ~Gp_Chat();
     Gp_Chat(const Gp_Chat& g);
     Gp_Chat(Gp_Chat&& g);
-    void add_user(Client user);
-    void remove_user(Client user);
+    void add_user(std::shared_ptr<Client> user);
+    void remove_user(std::shared_ptr<Client> user);
 
 private:
-    std::vector<Client*> users;
+    std::vector<std::shared_ptr<Client>> users;
 };
 
 #endif

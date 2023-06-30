@@ -63,6 +63,7 @@ bool Client::change_id(std::string old_id, std::string _password, std::string ne
     if(old_id == id && _password == password)
     {
         id = new_id;
+        std::cout << "Your id changed !" << std::endl;
         return true;
     }
     else
@@ -77,6 +78,7 @@ bool Client::change_password(std::string _id, std::string old_password, std::str
     if(id == _id && password == old_password)
     {
         password = new_password;
+        std::cout << "Your Password changed !" << std::endl;
         return true;
     }
     else

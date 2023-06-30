@@ -6,7 +6,7 @@
 
 //--------------------Constructors----------------------------------
 
-Message::Message(std::string _text_message, std::string _file_message_link, Client _sender, Client _reciever, std::string _chat_name)
+Message::Message(std::string _text_message, std::string _file_message_link, Client _sender, std::shared_ptr<Client> _reciever, std::string _chat_name)
 : text_message{_text_message} , file_message_link{_file_message_link}, sender{_sender}, reciever{_reciever}, chat_name{_chat_name}, time{}
 {
     std::cout << "Message Constructor" << std::endl;
@@ -132,7 +132,7 @@ Client Message::get_sender()
     return sender;
 }
 
-Client Message::get_reciever()
+std::shared_ptr<Client> Message::get_reciever()
 {
     return reciever;
 }
