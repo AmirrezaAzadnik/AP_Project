@@ -22,6 +22,8 @@ public:
     bool logout(std::string id, std::string password);
     bool delete_account(std::string id, std::string password);
     bool create_gp(std::string chat_name);
+    // bool add_user_to_group();
+    // bool remove_user_from_group();
     bool create_pv(Client user2);
     bool delete_chat(std::string chat_name);
     bool send_message(std::string _text_message, std::string _file_message_link, Client user, std::string _chat_name);

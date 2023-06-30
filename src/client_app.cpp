@@ -83,6 +83,7 @@ bool Client_App::signup(std::string id, std::string password)
             users.pop();
         }
     }
+    std::cout <<"YEP" << std::endl;
     while (!temp.empty())   //returning back elements in temp to users
         {
             users.push(temp.top());

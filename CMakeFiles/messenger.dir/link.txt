@@ -1,0 +1,1 @@
+/usr/local/bin/c++ CMakeFiles/messenger.dir/main.cpp.o CMakeFiles/messenger.dir/src/chat.cpp.o CMakeFiles/messenger.dir/src/client_app.cpp.o CMakeFiles/messenger.dir/src/message.cpp.o CMakeFiles/messenger.dir/src/client.cpp.o CMakeFiles/messenger.dir/src/gp_chat.cpp.o CMakeFiles/messenger.dir/src/pv_chat.cpp.o -o messenger  -lcurl lib/libcurlpp.a 

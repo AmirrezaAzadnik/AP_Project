@@ -95,7 +95,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.18.4/CMakeCCompiler.cmake"
   "CMakeFiles/3.18.4/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.18.4/CMakeSystem.cmake"
-  "build/CMakeLists.txt"
+  "CMakeLists.txt"
   )
 
 # The corresponding makefile is:
@@ -116,5 +116,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/main.dir/DependInfo.cmake"
+  "CMakeFiles/messenger.dir/DependInfo.cmake"
   )

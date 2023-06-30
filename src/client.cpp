@@ -1,11 +1,40 @@
 #include "../include/client.h"
+#include <sstream>
+
+// using json = nlohmann::json;
 
 //---------------Constructors---------------------------
 
 Client::Client(std::string _id, std::string _password)
 : id{_id}, password{_password}
 {
+    // Creating JSON Object
+    // json client;
+    // client ["ID"] = id;
+    // client ["Password"] = password;
+
+    // std::string client_str {client.dump()};
+
+    // //sending client to database mongodb atlas through http request by json object
     std::cout << "Client Constructor !" << std::endl;
+    // std::string url {"https://ap-south-1.aws.data.mongodb-api.com/app/data-ndvsb/endpoint/data/v1"};
+    // curlpp::Easy request;
+    // request.setOpt(new curlpp::options::Url(url));
+    // std::ostringstream result;
+    // request.setOpt(new curlpp::options::WriteStream(&result));
+    // std::list<std::string> headers;
+    // headers.push_back("Content-Type: application/json");
+    // headers.push_back("apiKey: 649e07851bedd26bdf6d283d");
+    // request.setOpt(new curlpp::options::HttpHeader(headers));
+    // request.setOpt(new curlpp::options::PostFields(client_str));
+    // request.setOpt(new curlpp::options::PostFieldSize(client_str.size()));
+
+    // request.perform();
+    // std::cout << result.str() << std::endl;
+    // std::string response{result.str{}};
+    // json server_data {json::parse(response)};
+    // for(auto item : server_data["results"])
+    //     std::cout << 
 }
 
 Client::Client(const Client& c) 

@@ -1,4 +1,4 @@
-# Install script for directory: /usr/src/app/build
+# Install script for directory: /usr/src/app
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

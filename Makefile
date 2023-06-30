@@ -67,7 +67,7 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /usr/src/app/build
+CMAKE_SOURCE_DIR = /usr/src/app
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /usr/src/app
@@ -130,17 +130,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named main
+# Target rules for targets named messenger
 
 # Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
-.PHONY : main
+messenger: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 messenger
+.PHONY : messenger
 
 # fast build rule for target.
-main/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
+messenger/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/messenger.dir/build.make CMakeFiles/messenger.dir/build
+.PHONY : messenger/fast
 
 main.o: main.cpp.o
 
@@ -148,7 +148,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/messenger.dir/build.make CMakeFiles/messenger.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -157,7 +157,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/messenger.dir/build.make CMakeFiles/messenger.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -166,7 +166,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/messenger.dir/build.make CMakeFiles/messenger.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 src/chat.o: src/chat.cpp.o
@@ -175,7 +175,7 @@ src/chat.o: src/chat.cpp.o
 
 # target to build an object file
 src/chat.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/chat.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/messenger.dir/build.make CMakeFiles/messenger.dir/src/chat.cpp.o
 .PHONY : src/chat.cpp.o
 
 src/chat.i: src/chat.cpp.i
@@ -184,7 +184,7 @@ src/chat.i: src/chat.cpp.i
 
 # target to preprocess a source file
 src/chat.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/chat.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/messenger.dir/build.make CMakeFiles/messenger.dir/src/chat.cpp.i
 .PHONY : src/chat.cpp.i
 
 src/chat.s: src/chat.cpp.s
@@ -193,7 +193,7 @@ src/chat.s: src/chat.cpp.s
 
 # target to generate assembly for a file
 src/chat.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/chat.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/messenger.dir/build.make CMakeFiles/messenger.dir/src/chat.cpp.s
 .PHONY : src/chat.cpp.s
 
 src/client.o: src/client.cpp.o
@@ -202,7 +202,7 @@ src/client.o: src/client.cpp.o
 
 # target to build an object file
 src/client.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/client.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/messenger.dir/build.make CMakeFiles/messenger.dir/src/client.cpp.o
 .PHONY : src/client.cpp.o
 
 src/client.i: src/client.cpp.i
@@ -211,7 +211,7 @@ src/client.i: src/client.cpp.i
 
 # target to preprocess a source file
 src/client.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/client.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/messenger.dir/build.make CMakeFiles/messenger.dir/src/client.cpp.i
 .PHONY : src/client.cpp.i
 
 src/client.s: src/client.cpp.s
@@ -220,7 +220,7 @@ src/client.s: src/client.cpp.s
 
 # target to generate assembly for a file
 src/client.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/client.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/messenger.dir/build.make CMakeFiles/messenger.dir/src/client.cpp.s
 .PHONY : src/client.cpp.s
 
 src/client_app.o: src/client_app.cpp.o
@@ -229,7 +229,7 @@ src/client_app.o: src/client_app.cpp.o
 
 # target to build an object file
 src/client_app.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/client_app.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/messenger.dir/build.make CMakeFiles/messenger.dir/src/client_app.cpp.o
 .PHONY : src/client_app.cpp.o
 
 src/client_app.i: src/client_app.cpp.i
@@ -238,7 +238,7 @@ src/client_app.i: src/client_app.cpp.i
 
 # target to preprocess a source file
 src/client_app.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/client_app.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/messenger.dir/build.make CMakeFiles/messenger.dir/src/client_app.cpp.i
 .PHONY : src/client_app.cpp.i
 
 src/client_app.s: src/client_app.cpp.s
@@ -247,7 +247,7 @@ src/client_app.s: src/client_app.cpp.s
 
 # target to generate assembly for a file
 src/client_app.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/client_app.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/messenger.dir/build.make CMakeFiles/messenger.dir/src/client_app.cpp.s
 .PHONY : src/client_app.cpp.s
 
 src/gp_chat.o: src/gp_chat.cpp.o
@@ -256,7 +256,7 @@ src/gp_chat.o: src/gp_chat.cpp.o
 
 # target to build an object file
 src/gp_chat.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/gp_chat.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/messenger.dir/build.make CMakeFiles/messenger.dir/src/gp_chat.cpp.o
 .PHONY : src/gp_chat.cpp.o
 
 src/gp_chat.i: src/gp_chat.cpp.i
@@ -265,7 +265,7 @@ src/gp_chat.i: src/gp_chat.cpp.i
 
 # target to preprocess a source file
 src/gp_chat.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/gp_chat.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/messenger.dir/build.make CMakeFiles/messenger.dir/src/gp_chat.cpp.i
 .PHONY : src/gp_chat.cpp.i
 
 src/gp_chat.s: src/gp_chat.cpp.s
@@ -274,7 +274,7 @@ src/gp_chat.s: src/gp_chat.cpp.s
 
 # target to generate assembly for a file
 src/gp_chat.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/gp_chat.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/messenger.dir/build.make CMakeFiles/messenger.dir/src/gp_chat.cpp.s
 .PHONY : src/gp_chat.cpp.s
 
 src/message.o: src/message.cpp.o
@@ -283,7 +283,7 @@ src/message.o: src/message.cpp.o
 
 # target to build an object file
 src/message.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/message.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/messenger.dir/build.make CMakeFiles/messenger.dir/src/message.cpp.o
 .PHONY : src/message.cpp.o
 
 src/message.i: src/message.cpp.i
@@ -292,7 +292,7 @@ src/message.i: src/message.cpp.i
 
 # target to preprocess a source file
 src/message.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/message.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/messenger.dir/build.make CMakeFiles/messenger.dir/src/message.cpp.i
 .PHONY : src/message.cpp.i
 
 src/message.s: src/message.cpp.s
@@ -301,7 +301,7 @@ src/message.s: src/message.cpp.s
 
 # target to generate assembly for a file
 src/message.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/message.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/messenger.dir/build.make CMakeFiles/messenger.dir/src/message.cpp.s
 .PHONY : src/message.cpp.s
 
 src/pv_chat.o: src/pv_chat.cpp.o
@@ -310,7 +310,7 @@ src/pv_chat.o: src/pv_chat.cpp.o
 
 # target to build an object file
 src/pv_chat.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/pv_chat.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/messenger.dir/build.make CMakeFiles/messenger.dir/src/pv_chat.cpp.o
 .PHONY : src/pv_chat.cpp.o
 
 src/pv_chat.i: src/pv_chat.cpp.i
@@ -319,7 +319,7 @@ src/pv_chat.i: src/pv_chat.cpp.i
 
 # target to preprocess a source file
 src/pv_chat.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/pv_chat.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/messenger.dir/build.make CMakeFiles/messenger.dir/src/pv_chat.cpp.i
 .PHONY : src/pv_chat.cpp.i
 
 src/pv_chat.s: src/pv_chat.cpp.s
@@ -328,35 +328,8 @@ src/pv_chat.s: src/pv_chat.cpp.s
 
 # target to generate assembly for a file
 src/pv_chat.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/pv_chat.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/messenger.dir/build.make CMakeFiles/messenger.dir/src/pv_chat.cpp.s
 .PHONY : src/pv_chat.cpp.s
-
-src/server.o: src/server.cpp.o
-
-.PHONY : src/server.o
-
-# target to build an object file
-src/server.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/server.cpp.o
-.PHONY : src/server.cpp.o
-
-src/server.i: src/server.cpp.i
-
-.PHONY : src/server.i
-
-# target to preprocess a source file
-src/server.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/server.cpp.i
-.PHONY : src/server.cpp.i
-
-src/server.s: src/server.cpp.s
-
-.PHONY : src/server.s
-
-# target to generate assembly for a file
-src/server.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/server.cpp.s
-.PHONY : src/server.cpp.s
 
 # Help Target
 help:
@@ -366,7 +339,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... main"
+	@echo "... messenger"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -388,9 +361,6 @@ help:
 	@echo "... src/pv_chat.o"
 	@echo "... src/pv_chat.i"
 	@echo "... src/pv_chat.s"
-	@echo "... src/server.o"
-	@echo "... src/server.i"
-	@echo "... src/server.s"
 .PHONY : help
 
 

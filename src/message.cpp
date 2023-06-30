@@ -1,5 +1,7 @@
 #include "../include/message.h"
 #include "../include/client.h"
+#include "../include/json.hpp"
+#include <sstream>
 
 
 //--------------------Constructors----------------------------------
@@ -39,6 +41,34 @@ Message::Message(std::string _text_message, std::string _file_message_link, Clie
     time[4] = minute;
     time[5] = second;
     // end of time ------------------------------------------------
+
+    // Creating JSON Object
+    // json message;
+    // message ["Sender"] = get_sender().get_id();
+    // message ["Reciever"] = get_reciever().get_id();
+    // message ["Chat Name"] = get_chat_name();
+    // message ["Content"] = get_message();
+    // message ["Time"] = get_time_in_string();
+
+    // std::string message_str {message.dump()};
+
+    // //sending message to database mongodb atlas through http request by json object
+    // std::string url {"https://ap-south-1.aws.data.mongodb-api.com/app/data-ndvsb/endpoint/data/v1"};
+    // curlpp::Easy request;
+    // request.setOpt(new curlpp::options::Url(url));
+    // std::ostringstream result;
+    // request.setOpt(new curlpp::options::WriteStream(&result));
+    // std::list<std::string> headers;
+    // headers.push_back("Content-Type: application/json");
+    // headers.push_back("apiKey: 649e07851bedd26bdf6d283d");
+    // request.setOpt(new curlpp::options::HttpHeader(headers));
+    // request.setOpt(new curlpp::options::PostFields(message_str));
+    // request.setOpt(new curlpp::options::PostFieldSize(message_str.size()));
+
+    // request.perform();
+    // std::cout << result.str() << std::endl;
+
+
 }
 
 Message::~Message()
