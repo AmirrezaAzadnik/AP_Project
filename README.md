@@ -1,2 +1,2 @@
-# AP_Project
+# Advanced Programming Project
 Advanced Programming Project
